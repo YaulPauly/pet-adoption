@@ -1,0 +1,22 @@
+.image_logo_container{
+    margin-top: 6px;
+    padding-left: 40px;
+    padding-right:6px;
+}
+
+.text_content {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.image_pet_main_container{
+    justify-content: center;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+
+
+}
