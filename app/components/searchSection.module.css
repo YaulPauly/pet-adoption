@@ -1,0 +1,29 @@
+.text_content_search {
+    font-size: 19px;
+    font-weight: 400;
+    margin-left: 40px;
+
+}
+
+.text_title_search {
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.text_title_span {
+    color: #7E41A1;
+}
+
+.button_search {
+    background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%);
+    border-radius: 28px;
+    width: 180px;
+    height: 45px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}

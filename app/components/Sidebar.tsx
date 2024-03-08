@@ -63,7 +63,7 @@ const Sidebar: React.FC<Sidebar> = ({ isOpen }) => {
             <Menu
                 theme="dark"
                 onClick={onClick}
-                style={{ width: 325, display: isOpen, position: 'fixed', height: 1000 }}
+                style={{ width: 325, display: isOpen, position: 'fixed', height: 1000, zIndex:10 }}
                 defaultSelectedKeys={["1"]}
                 defaultOpenKeys={["sub1"]}
                 mode="inline"

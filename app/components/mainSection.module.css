@@ -17,6 +17,37 @@
     padding-top: 30px;
     padding-right: 50px;
     padding-bottom: 30px;
+}
 
+.button_register {
+    background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%) !important;
+    border-radius: 28px !important;
+    width: 151px !important;
+    height: 40px !important;
+    color: #FFFFFF !important;
+    margin-bottom: 40px !important;
+    margin-left: 40px !important;
+}
 
+.logo_image {
+    object-fit: contain;
+    max-width: 355px;
+    max-height: 94px;
+}
+
+.main_section_image {
+    object-fit: contain;
+    max-width: 350px;
+    max-height: 250px;
+}
+
+@media only screen and (max-width: 412px){
+    .logo_image {
+        max-width: 250px;
+        max-height: 70px;
+    }
+
+    .main_section_image {
+        max-width: 280px;
+    }
 }

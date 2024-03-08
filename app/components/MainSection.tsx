@@ -1,8 +1,9 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import Logo from "../../public/images/logo-polihuella.webp";
 import Pet from "../../public/images/pets2.webp";
 import Image from "next/image";
 import styles from "./mainSection.module.css"
+import Link from "next/link";
 
 const MainSection = () => {
     return (
@@ -17,12 +18,17 @@ const MainSection = () => {
         >
             <Grid item xs={12} sm={6} order={{ xs: 1, sm: 1 }}>
                 <Box className={styles.image_logo_container}>
-                    <Image alt="logo" src={Logo} style={{objectFit: "contain", maxWidth:355, maxHeight:94}} />
+                    <Image alt="logo" src={Logo} className={styles.logo_image}/>
                 </Box>
                 <Typography className={styles.text_content}>
                     El sitio ideal para encontrar un amigo de compañia y disfrutar bellos
                     momentos con él.
                 </Typography>
+                <Link href="#" passHref>
+                    <Button variant="contained" className={styles.button_register}>
+                    Registrate
+                    </Button>
+                </Link>
             </Grid>
             <Grid
                 item
@@ -32,7 +38,7 @@ const MainSection = () => {
                 className={styles.image_pet_main_container}
             >
                 <Box>
-                    <Image alt="mascota" src={Pet} style={{objectFit: "contain", maxWidth:350, maxHeight:250}}/>
+                    <Image alt="mascota" src={Pet} className={styles.main_section_image}/>
                 </Box>
             </Grid>
         </Grid>
