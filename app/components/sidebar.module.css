@@ -1,0 +1,13 @@
+.sidebar_menu {
+    width: 325px;
+    position: fixed;
+    height: 1000px;
+    z-index: 10;
+    margin-top: 64px;
+}
+
+@media only screen and (max-width: 596.5px) {
+    .sidebar_menu {
+        margin-top: 56px;
+    }
+}

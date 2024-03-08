@@ -1,27 +1,33 @@
 .footer_container {
-    margin-top: 70px;
     padding: 2.5rem;
     background-color: #7E41A1;
     display: flex;
     flex-direction: column;
-    flex: 0 0 auto;
-    position: absolute;
-    clear: both;
-    width: 100%;
+    align-items: center;
+    position: relative;
 }
 
-.text_content {
-    text-align: center;
+.text_content,
+.text_title {
     color: aliceblue;
 }
 
 .text_title {
-    text-align: center;
     font-weight: bold;
     font-size: 26px;
-    color: #101011;
+    margin-bottom: 10px;
 }
 
 .text_span {
     color: #BD95D5;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer_container {
+        padding: 1.5rem;
+    }
+
+    .text_title {
+        font-size: 22px;
+    }
 }

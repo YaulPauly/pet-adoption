@@ -20,13 +20,13 @@
 }
 
 .button_register {
-    background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%) !important;
-    border-radius: 28px !important;
-    width: 151px !important;
-    height: 40px !important;
-    color: #FFFFFF !important;
-    margin-bottom: 40px !important;
-    margin-left: 40px !important;
+    background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%);
+    border-radius: 28px;
+    width: 151px;
+    height: 40px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    margin-left: 40px;
 }
 
 .logo_image {
@@ -39,6 +39,16 @@
     object-fit: contain;
     max-width: 350px;
     max-height: 250px;
+}
+
+.main_section__container {
+    max-width: 1000px;
+}
+
+@media only screen and (max-width: 900px) {
+    .main_section__container {
+        padding-top: 64px;
+    }
 }
 
 @media only screen and (max-width: 412px){

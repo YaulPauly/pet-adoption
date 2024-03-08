@@ -14,7 +14,7 @@ const MainSection = () => {
             container
             direction="row"
             alignItems="center"
-            maxWidth={1000}
+            className={styles.main_section__container}
         >
             <Grid item xs={12} sm={6} order={{ xs: 1, sm: 1 }}>
                 <Box className={styles.image_logo_container}>

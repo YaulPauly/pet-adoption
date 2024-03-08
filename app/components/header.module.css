@@ -33,5 +33,9 @@
         display: block;
         font-size: 20px;
     }
+    .navbar {
+        position: fixed;
+        z-index: 10;
+    }
 }
   

@@ -6,6 +6,8 @@ import {
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { ConfigProvider, Menu } from "antd";
+import styles from './sidebar.module.css'
+
 
 interface Sidebar {
     isOpen: string
@@ -63,7 +65,8 @@ const Sidebar: React.FC<Sidebar> = ({ isOpen }) => {
             <Menu
                 theme="dark"
                 onClick={onClick}
-                style={{ width: 325, display: isOpen, position: 'fixed', height: 1000, zIndex:10 }}
+                style={{display: isOpen}}
+                className={styles.sidebar_menu}
                 defaultSelectedKeys={["1"]}
                 defaultOpenKeys={["sub1"]}
                 mode="inline"
