@@ -15,7 +15,15 @@ import styles from './header.module.css'
 import Sidebar from "./Sidebar";
 import Link from "next/link";
 
-const pages = ['Inicio', 'Adopciones', 'Perros', 'Gatos', 'Otros', '¿Cómo Adoptar?', 'Dar en Adopción'];
+const pages = [
+    {name: 'Inicio', route: '/'},
+    {name: 'Adopciones', route: '/adopciones'},
+    {name: 'Perros', route: '/perros'},
+    {name: 'Gatos', route: '/gatos'},
+    {name: 'Otros', route: '/otros'},
+    {name: '¿Cómo Adoptar?', route: '/instrucciones-adoptar'},
+    {name: 'Dar en Adopción', route: '/iniciar-sesion'}
+];
 
 const Header = () => {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -39,7 +47,7 @@ const Header = () => {
                             variant="h6"
                             noWrap
                             component="a"
-                            href="#app-bar-with-responsive-menu"
+                            href="/"
                             sx={{
                                 mr: 2,
                                 display: { xs: 'none', md: 'flex' },
@@ -85,27 +93,32 @@ const Header = () => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
+                                    <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center">{page.name}</Typography>
                                     </MenuItem>
                                 ))}
                             </Menu>
                         </Box>
-                        
+
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
                             {pages.map((page) => (
-                                <Button
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                <Link 
+                                    key={page.name} 
+                                    href={page.route}
+                                    className={styles.link}
                                 >
-                                    {page}
-                                </Button>
+                                    <Button
+                                        onClick={handleCloseNavMenu}
+                                        sx={{ my: 2, color: 'white', display: 'block' }}
+                                    >
+                                        {page.name}
+                                    </Button>
+                                </Link>
                             ))}
                         </Box>
 
                         <Box sx={{ flexGrow: 0 }}>
-                            <Link href="#">
+                            <Link href="/iniciar-sesion">
                                 <Button sx={{ p: 0 }} className={styles.button_login}>
                                     Iniciar sesión
                                 </Button>
@@ -114,7 +127,7 @@ const Header = () => {
                     </Toolbar>
                 </Container>
             </AppBar>
-            <Sidebar isOpen={isOpen ? 'block' : 'none'} />
+            <Sidebar isOpen={isOpen ? 'block' : 'none'} pagesMenu={pages} />
         </>
     );
 }

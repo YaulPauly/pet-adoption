@@ -25,7 +25,7 @@ const SearchSection = () => {
                     Está comprobado que tener una mascota en tu hogar mejora tu salud y
                     humor.
                 </Typography>
-                <Link href="#" passHref>
+                <Link href="/adopciones" passHref>
                     <Button variant="contained" className={styles.button_search}>
                         Buscar mascotas
                     </Button>

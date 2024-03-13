@@ -24,6 +24,10 @@
 .search_icon_responsive{
     display: none;
 }
+
+.link {
+    text-decoration: none;
+}
   
 @media only screen and (max-width: 900px) {
     .search_icon_full {

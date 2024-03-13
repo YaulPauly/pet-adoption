@@ -1,0 +1,16 @@
+.banner_image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .banner_image {
+        margin-top: 64px;
+    }
+}
+
+@media only screen and (max-width: 596.5px) {
+    .banner_image {
+        margin-top: 56px;
+    }
+}
