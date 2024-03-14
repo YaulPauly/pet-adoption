@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Logo from "../../public/images/logo-polihuella.webp";
-import Pet from "../../public/images/pets2.webp";
+import Logo from "@/logo-polihuella.webp";
+import Pet from "@/pets2.webp";
 import Image from "next/image";
 import styles from "./mainSection.module.css"
 import Link from "next/link";

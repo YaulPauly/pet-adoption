@@ -1,9 +1,9 @@
 import { Card, CardActionArea, CardContent, CardMedia, Grid, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import styles from "./adoptionSection.module.css"
-import DogImage from "../../public/images/dog.webp";
-import CatImage from "../../public/images/cat.webp";
-import HamsterImage from "../../public/images/ham.webp";
+import DogImage from "@/dog.webp";
+import CatImage from "@/cat.webp";
+import HamsterImage from "@/ham.webp";
 
 const AdoptionSection = () => {
     const pets = [

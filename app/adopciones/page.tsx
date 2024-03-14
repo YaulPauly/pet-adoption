@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Header from "../components/Header";
-import BannerAdoption from "../../public/images/banner-adoptions.webp"
+import BannerAdoption from "@/banner-adoptions.webp"
 import Footer from "../components/Footer";
 import { Box, Button, Container, Typography } from "@mui/material";
 import styles from './adopciones.module.css'

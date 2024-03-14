@@ -15,6 +15,7 @@ const Banner: React.FC<IBanner> = ({banner}) => {
                 width={1200}
                 height={450}
                 className={styles.banner_image}
+                priority
             />
         </Container>
      );
