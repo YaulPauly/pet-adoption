@@ -4,6 +4,7 @@ import CarouselPetCard from "./CarouselPetCard";
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SliderWrapper from "./_SlickSliderStyle";
 
 const pets = [
     {
@@ -89,18 +90,26 @@ const pets = [
     },
 ]
 
+const divDots = () => {
+    return (
+        <div className="ft-slick__dots--custom">
+            <div className="loading" />
+        </div>
+    )
+}
 
 const CarouselPet: React.FC = () => {
     let settings = {
         dots: true,
         infinite: true,
         autoplay: true,
-        speed: 1200,
+        speed: 1500,
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
         cssEase: "linear",
         adaptiveHeight: true,
+        customPaging: divDots,
         responsive: [
 
             {
@@ -123,15 +132,17 @@ const CarouselPet: React.FC = () => {
 
     return (
         <div className="slider-container">
-            <Slider {...settings}>
-                {pets.map((pet) => (
-                    <div key={pet.id}>
-                        <div className={styles.carousel_item}>
-                            <CarouselPetCard petId={pet.id} nombre={pet.nombre} imagen={pet.imagen} genero={pet.genero} />
+            <SliderWrapper>
+                <Slider {...settings}>
+                    {pets.map((pet) => (
+                        <div key={pet.id}>
+                            <div className={styles.carousel_item}>
+                                <CarouselPetCard petId={pet.id} nombre={pet.nombre} imagen={pet.imagen} genero={pet.genero} />
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </Slider>
+                    ))}
+                </Slider>
+            </SliderWrapper>
         </div>
     );
 }

@@ -10,17 +10,17 @@ const AdoptionSection = () => {
         {
           type: "Perros",
           image: DogImage.src,
-          to: "#",
+          to: "/perros",
         },
         {
           type: "Gatos",
           image: CatImage.src,
-          to: "#",
+          to: "/gatos",
         },
         {
           type: "Otros",
           image: HamsterImage.src,
-          to: "#",
+          to: "/otros",
         },
     ];
     

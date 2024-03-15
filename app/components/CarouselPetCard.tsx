@@ -17,9 +17,9 @@ const CarouselPetCard: React.FC<ICarouselPetCard> = ({petId, nombre, imagen, gen
 
     return (
         <CardActionArea onClick={() => router.push(`/perros/${petId}`)} sx={{ width:'300px', height: '250px', marginBottom: '50px', textAlign: 'center' }}>
-            <Card>
+            <Card sx={{borderRadius:'20px', boxShadow: '-moz-initial'}}>
                 <Image src={imagen} alt="card" width={300} height={250} blurDataURL={imagen} />
-                <ImageListItemBar title={nombre} subtitle={`Sexo: ${genero}`} />
+                <ImageListItemBar title={nombre} subtitle={`Sexo: ${genero}`} sx={{borderEndStartRadius: '20px', borderEndEndRadius: '20px'}}/>
             </Card>
         </CardActionArea>
     );
